@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "barrage-deyu",
+    "barrage-demo": "barrage-demo"
+  }
+}

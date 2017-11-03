@@ -30,9 +30,11 @@ bower_components
 .lock-wscript
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
+build
 build/Release
 
 # Dependency directories
+functions/node_modules
 node_modules/
 jspm_packages/
 
@@ -56,4 +58,3 @@ typings/
 
 # dotenv environment variables file
 .env
-
