@@ -9,7 +9,8 @@ Use Chrome open https://barrage-demo.firebaseapp.com/
 
 ![Wall picture](https://github.com/DeyuGoGo/MessageBarrage/blob/master/demowall.png?raw=true "Wall")
 
-Send message to linebot account : @ydx8241f
+Send message to linebot account by ID : @ydx8241f
+
 or scan qrocde below.
 
 ![Qrcode](https://github.com/DeyuGoGo/MessageBarrage/blob/master/demoqrocde.png?raw=true)
