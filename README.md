@@ -5,7 +5,7 @@
 
 # Demo
 
-Use Chrome open https://barrage-deyu.firebaseapp.com/
+Use Chrome open https://barrage-demo.firebaseapp.com/
 
 ![Wall picture](https://github.com/DeyuGoGo/MessageBarrage/blob/master/demowall.png?raw=true "Wall")
 
@@ -45,4 +45,4 @@ Deploy firebase hosting and functions.
 ```sh
 yarn deploy
 ```
-# Done 
+# Done
