@@ -7,30 +7,42 @@
 
 Use Chrome open https://barrage-deyu.firebaseapp.com/
 
+![Wall picture](https://github.com/DeyuGoGo/MessageBarrage/blob/master/demowall.png?raw=true "teach 2")
+
 Send message to linebot account : @ydx8241f
 or scan qrocde below.
 
 ![](https://qr-official.line.me/M/cjW6HKQZOh.png)
 
-# install
+![Sender picture](https://github.com/DeyuGoGo/MessageBarrage/blob/master/demoline.png?raw=true "teach 2")
 
-## 1. clone project and install
+# Install
+## 1. install firebase tool if you not install yet.
+```sh
+npm install -g firebase-tools
+```
+## 2. clone project and install
 ```sh
 git clone https://github.com/DeyuGoGo/MessageBarrage.git
 yarn install
-yarn build
 ```
-
-## 2. need init with your firebase project.
-Need use your firebase project.
-1. Please install firebase-tools command line
-2. login your firebase account 3.
-3. then use your project.
-4. build your project
+## 3. Connect your firebase project
+1. login your firebase account .
+2. then use your project.(if you don't have project go to firebase console create new one : https://console.firebase.google.com/
 ```sh
-npm install -g firebase-tools
 firebase login
 firebase use --add
-firebase serve --only functions,hosting
 ```
-# 未完待續。
+# Setup
+Open src/Config.js change API_REGSITER_TOKEN
+```javascript
+const EVENT_NAME = "MessageBarrage";//your event name ,should same with messagebarragehook.
+const API_REGSITER_TOKEN = "YOUR_FUNCTIONS_URL";// you can find this url in your firebase console in functions tab. url ex : https://us-central1-yourfirebaseproject.cloudfunctions.net/addWebFcmToken
+export { EVENT_NAME, API_REGSITER_TOKEN };
+```
+# Deploy
+Deploy firebase hosting and functions.
+```sh
+yarn deploy
+```
+# Done
