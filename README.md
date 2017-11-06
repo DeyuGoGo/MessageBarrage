@@ -7,14 +7,14 @@
 
 Use Chrome open https://barrage-deyu.firebaseapp.com/
 
-![Wall picture](https://github.com/DeyuGoGo/MessageBarrage/blob/master/demowall.png?raw=true "teach 2")
+![Wall picture](https://github.com/DeyuGoGo/MessageBarrage/blob/master/demowall.png?raw=true "Wall")
 
 Send message to linebot account : @ydx8241f
 or scan qrocde below.
 
-![Qrcode](https://qr-official.line.me/M/cjW6HKQZOh.png)
+![Qrcode](https://github.com/DeyuGoGo/MessageBarrage/blob/master/demoqrocde.png?raw=true)
 
-![Sender picture](https://github.com/DeyuGoGo/MessageBarrage/blob/master/demoline.png?raw=true "teach 2")
+![Sender picture](https://github.com/DeyuGoGo/MessageBarrage/blob/master/demoline.png?raw=true "Picture")
 
 # Install
 ## 1. install firebase tool if you not install yet.
