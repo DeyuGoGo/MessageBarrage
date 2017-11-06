@@ -12,7 +12,7 @@ Use Chrome open https://barrage-deyu.firebaseapp.com/
 Send message to linebot account : @ydx8241f
 or scan qrocde below.
 
-![](https://qr-official.line.me/M/cjW6HKQZOh.png)
+![Qrcode](https://qr-official.line.me/M/cjW6HKQZOh.png)
 
 ![Sender picture](https://github.com/DeyuGoGo/MessageBarrage/blob/master/demoline.png?raw=true "teach 2")
 
@@ -45,4 +45,4 @@ Deploy firebase hosting and functions.
 ```sh
 yarn deploy
 ```
-# Done
+# Done 
