@@ -22,7 +22,6 @@ exports.addWebFcmToken = functions.https.onRequest((req, res) => {
         console.log("Error getting documents: ", error);
         res.end("Has error :  " + error);
     });
-
    });
 });
 
@@ -47,4 +46,17 @@ exports.getTokens = functions.https.onRequest((req, res) => {
       console.log('Error getting documents', err);
     });
   });
+});
+
+exports.addMessageLog = functions.https.onRequest((req, res) => {
+   cors(req, res, () => {
+     console.log("addMessageLog " + " = " + req.body.uid +  " content: " + JSON.stringify(req.body.message));
+     try {
+       var message = db.doc('event/'+req.body.uid+'/messages/'+new Date());
+       message.set(req.body.message, { merge: true });
+       res.end("success? ");
+     } catch (e) {
+       res.end("fail "+ e);
+     }
+   });
 });

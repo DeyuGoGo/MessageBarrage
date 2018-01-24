@@ -1,8 +1,9 @@
 /*global firebase*/
-import {EVENT_NAME,API_REGSITER_TOKEN} from './Config'
+import {EVENT_NAME,API_REGSITER_TOKEN,API_MESSAGE_LOG} from './Config'
 export default class Firebase{
-  constructor(){
+  constructor(listener){
     this.messaging = firebase.messaging();
+    this.OnMessageListener = listener
   }
   init(){
     this.messaging.requestPermission()
@@ -18,9 +19,12 @@ export default class Firebase{
     });
     this.messaging.onMessage( payload => {
       console.log("Message received. ", payload);
-      this.onMessage(payload.data.message);
+      this.OnMessageListener(payload.data.userName,payload.data.message);
+      this.sendMessageLogToServer(payload.data)
     });
   }
+
+
   _registerTokenToServer(){
     console.log(this);
     this.messaging.getToken()
@@ -65,6 +69,28 @@ export default class Firebase{
         body: JSON.stringify({
           uid: EVENT_NAME,
           token: token
+        })
+      }).then(response => {
+        console.log(response);
+        resolve(response);
+      }).catch(error => {
+        console.log(error);
+        reject(error);
+      });
+    });
+  }
+  sendMessageLogToServer(message){
+    console.log(message);
+    console.log(JSON.stringify(message));
+    return new Promise((resolve,reject)=>{
+      fetch(API_MESSAGE_LOG, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          uid: EVENT_NAME,
+          message: message
         })
       }).then(response => {
         console.log(response);

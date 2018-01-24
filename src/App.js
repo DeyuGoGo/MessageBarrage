@@ -8,14 +8,13 @@ class App extends Component {
   constructor(props) {
        super(props);
        this.state = {}
-       this.firebase = new Firebase();
-       this.firebase.onMessage = this._Post;
+       this.firebase = new Firebase(this.OnMessage);
    }
 
-   _Post(text){
+   OnMessage(name,text){
      var l = document.createElement("p");
      l.type = "text";
-     l.innerHTML = text;
+     l.innerHTML = name+":"+text;
      l.style.fontSize = ((Math.random() *50)+10)+"px";
      l.className = "slidein";
      l.style.top = Math.random() * (window.innerHeight-20)+"px";

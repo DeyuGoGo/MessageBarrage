@@ -4,10 +4,10 @@
   "private": true,
   "dependencies": {
     "comment-core-library": "^0.9.3",
-    "firebase": "^4.6.0",
-    "firebase-functions": "^0.7.2",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
+    "firebase": "^4.8.2",
+    "firebase-functions": "^0.7.5",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "react-scripts": "1.0.14"
   },
   "scripts": {
@@ -16,7 +16,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "goh": "react-scripts build ; firebase deploy --only hosting ",
-    "gof": "firebase deploy --only functions " ,
+    "gof": "firebase deploy --only functions ",
     "deploy": "react-scripts build ; firebase deploy --only hosting,functions ",
     "init": "firebase deploy --only functions "
   }
